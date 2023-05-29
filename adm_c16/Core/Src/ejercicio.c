@@ -15,7 +15,7 @@
 
 void zeros(uint32_t *vector, uint32_t longitud){
 
-	int i;
+	uint32_t i;
 	for(i = 0; i < longitud; i++ ){
 		vector[i] = 0;
 	}
@@ -31,7 +31,7 @@ void productoEscalar32(uint32_t *vectorIn, uint32_t *vectorOut, uint32_t longitu
 
 	uint32_t max32bits = UINT32_MAX;
 
-	int i;
+	uint32_t i;
 	for(i = 0; i < longitud; i++ ){
 		if(vectorOut[i] > (max32bits / escalar)) vectorOut[i] = max32bits;
 		else vectorOut[i] = vectorIn[i] * escalar;
@@ -48,7 +48,7 @@ void productoEscalar16(uint16_t *vectorIn, uint16_t *vectorOut, uint32_t longitu
 
 	uint16_t max16bits = UINT16_MAX;
 
-	int i;
+	uint32_t i;
 	for(i = 0; i < longitud; i++ ){
 		if(vectorOut[i] > (max16bits / escalar)) vectorOut[i] = max16bits;
 		else vectorOut[i] = vectorIn[i] * escalar;
@@ -63,7 +63,7 @@ void productoEscalar12(uint12_t *vectorIn, uint12_t *vectorOut, uint32_t longitu
 
 	uint12_t max12bits = UINT12_MAX;
 
-	int i;
+	uint32_t i;
 	for(i = 0; i < longitud; i++ ){
 		if(vectorOut[i] > (max12bits / escalar)) vectorOut[i] = max12bits;
 		else vectorOut[i] = vectorIn[i] * escalar;
