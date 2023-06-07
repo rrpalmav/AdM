@@ -6,11 +6,22 @@ Preguntas orientadoras
 1. Describa brevemente los diferentes perfiles de familias de
 microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias
 características.
-
+Respuesta: 
+***Cortex-A***: Esta familia esta desarrollador para uso de aplicaciones
+***Cortex-R***: Esta familia esta dedicada especificamente para proyectos en Tiempo Real y Sistemas Criticos.
+***Cortex-M***: El uso especifico para uso de microcontroladores
 
 Cortex M
 1. Describa brevemente las diferencias entre las familias de procesadores Cortex M0, M3 y
 M4.
+
+Respuesta: 
+***Cortex-M0***: Esta familia esta desarrollador para uso de aplicaciones
+***Cortex-M3***: Esta familia esta dedicada especificamente para proyectos en Tiempo Real y Sistemas Criticos.
+***Cortex-M4***: El uso especifico para uso de microcontroladores
+
+
+
 2. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código?
 Explique
 3. ¿Qué entiende por arquitectura load-store? ¿Qué tipo de instrucciones no posee este
