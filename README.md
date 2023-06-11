@@ -20,13 +20,13 @@ Cortex M
 M4.
 <br/>
 <b>Respuesta:</b>
-<br/>
-<em>Entres la familia de Cortex M, se puede explicar lo siguiente: </em>
-<br/>
-<b>Cortex-M0<b>: <em>Son utilizados por su bajo consumo y costo.</em>
-<br/>
-<b>Cortex-M3, Cortex-M4<b>: <em>están diseñados para tener una mejor performance.  Si la aplicación requieres matemáticas de punto flotante ya que estos los procesadores M4 utiliza las capacidades DSP o FPU.</em>
-<br/>
+
+><em>Entres la familia de Cortex M, se puede explicar lo siguiente: </em>
+><br/>
+><b>Cortex-M0</b>: <em>Son utilizados por su bajo consumo y costo.</em>
+><br/>
+><b>Cortex-M3, Cortex-M4</b>: <em>están diseñados para tener una mejor performance.  Si la aplicación requieres matemáticas de punto >flotante ya que estos los procesadores M4 utiliza las capacidades DSP o FPU.</em>
+><br/>
 
 2. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código?
 Explique
