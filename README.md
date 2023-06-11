@@ -5,43 +5,34 @@ Repositorio creado para la clase de Adquitectura de Microprocesadores
 Preguntas orientadoras
 1. Describa brevemente los diferentes perfiles de familias de
 microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias características.
-
 Respuesta: 
-
-><b>Cortex-A</b>: Esta familia esta desarrollador para uso de aplicaciones.
-><br/>
-><b>Cortex-R</b>: Esta familia esta dedicada especificamente para proyectos en Tiempo Real y Sistemas Criticos.
-><br/>
-><b>Cortex-M</b>: El uso especifico para uso de microcontroladores.
-
+> <b>Cortex-A</b>: Esta familia esta desarrollador para uso de aplicaciones.
+> <br/>
+> <b>Cortex-R</b>: Esta familia esta dedicada especificamente para proyectos en Tiempo Real y Sistemas Criticos.
+> <br/>
+> <b>Cortex-M</b>: El uso especifico para uso de microcontroladores.
+<br/>
 Cortex M
 1. Describa brevemente las diferencias entre las familias de procesadores Cortex M0, M3 y
 M4.
-
 <b>Respuesta:</b>
-
-><em>Entres la familia de Cortex M, se puede explicar lo siguiente: </em>
-><br/>
-><b>Cortex-M0</b>: <em>Son utilizados por su bajo consumo y costo.</em>
-><br/>
-><b>Cortex-M3, Cortex-M4</b>: <em>están diseñados para tener una mejor performance.  Si la aplicación requieres matemáticas de punto flotante ya que estos los procesadores M4 utiliza las capacidades DSP o FPU.</em>
-><br/>
-
+> <em>Entres la familia de Cortex M, se puede explicar lo siguiente: </em>
+> <br/>
+> <b>Cortex-M0</b>: <em>Son utilizados por su bajo consumo y costo.</em>
+> <br/>
+> <b>Cortex-M3, Cortex-M4</b>: <em>están diseñados para tener una mejor performance.  Si la aplicación requieres matemáticas de punto flotante ya que estos los procesadores M4 utiliza las capacidades DSP o FPU.</em>
+<br/>
 2. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código?
 Explique
-
 <b>Respuesta: </b>
-
-><em>El conjunto de instrucciones Thumb es un subconjunto de las instrucciones ARM de 32 bits más utilizadas. Las instrucciones de pulgar tienen una longitud de 16 bits cada una y tienen una instrucción ARM de 32 bits correspondiente que tiene el mismo efecto en el modelo de procesador. Las instrucciones Thumb funcionan con la configuración de registro ARM estándar, lo que permite una excelente interoperabilidad entre los estados ARM y Thumb.</em>
-
+><em>El conjunto de instrucciones Thumb es un subconjunto de las instrucciones ARM de 32 bits más utilizadas. Las instrucciones de pulgar tienen una longitud de 16 bits cada una y tienen una instrucción ARM de 32 bits correspondiente que tiene el mismo efecto en el modelo de procesador. Las instrucciones Thumb funcionan con la configuración de registro ARM estándar, lo que permite una excelente nteroperabilidad entre los estados ARM y Thumb.</em>
+<br/>
 
 3. ¿Qué entiende por arquitectura load-store? ¿Qué tipo de instrucciones no posee este
 tipo de arquitectura?
-<br/>
 <b>Respuesta: </b>
-<br/>
-<em>En la arquitectura Load Store se trabaja solo con los datos de los registros con el fin de evitar el acceso frecuente a memoria, lo cual ayuda a mejorar la velocidad, ya que, la memoria es más lenta. Por lo tanto, solo las instrucciones load y store accede a la memoria.
-En cambio, el resto de las instrucciones de la ISA trabajan únicamente con los registros (no tienen acceso a la memoria). Entonces podemos decir, que este tipo de arquitecturas no tienen instrucciones que traigan datos de memoria y hagan operaciones con esos valores (o hagan operaciones y guarden en memoria).</em>
+> <em>En la arquitectura Load Store se trabaja solo con los datos de los registros con el fin de evitar el acceso frecuente a memoria, lo cual ayuda a mejorar la velocidad, ya que, la memoria es más lenta. Por lo tanto, solo las instrucciones load y store accede a la memoria.  En cambio, el resto de las instrucciones de la ISA trabajan únicamente con los registros (no tienen acceso a la memoria).  Entonces podemos decir, que este tipo de arquitecturas no tienen instrucciones que traigan datos de memoria y hagan operaciones con esos valores (o hagan operaciones y guarden en memoria).</em>
+
 <br/>
 
 4. ¿Cómo es el mapa de memoria de la familia?
