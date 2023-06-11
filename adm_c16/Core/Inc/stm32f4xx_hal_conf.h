@@ -1,12 +1,12 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
+/<b>
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @file    stm32f4xx_hal_conf_template.h
   * @author  MCD Application Team
   * @brief   HAL configuration template file.
   *          This file should be copied to the application folder and renamed
   *          to stm32f4xx_hal_conf.h.
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @attention
   *
   * Copyright (c) 2017 STMicroelectronics.
@@ -16,7 +16,7 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   */
 /* USER CODE END Header */
 
@@ -32,7 +32,7 @@
 /* Exported constants --------------------------------------------------------*/
 
 /* ########################## Module Selection ############################## */
-/**
+/<b>
   * @brief This is the list of modules to be used in the HAL driver
   */
 #define HAL_MODULE_ENABLED
@@ -90,7 +90,7 @@
 #define HAL_CORTEX_MODULE_ENABLED
 
 /* ########################## HSE/HSI Values adaptation ##################### */
-/**
+/<b>
   * @brief Adjust the value of External High Speed oscillator (HSE) used in your application.
   *        This value is used by the RCC HAL module to compute the system frequency
   *        (when HSE is used as system clock source, directly or through the PLL).
@@ -103,7 +103,7 @@
   #define HSE_STARTUP_TIMEOUT    100U   /*!< Time out for HSE start up, in ms */
 #endif /* HSE_STARTUP_TIMEOUT */
 
-/**
+/<b>
   * @brief Internal High Speed oscillator (HSI) value.
   *        This value is used by the RCC HAL module to compute the system frequency
   *        (when HSI is used as system clock source, directly or through the PLL).
@@ -112,7 +112,7 @@
   #define HSI_VALUE    ((uint32_t)16000000U) /*!< Value of the Internal oscillator in Hz*/
 #endif /* HSI_VALUE */
 
-/**
+/<b>
   * @brief Internal Low Speed oscillator (LSI) value.
   */
 #if !defined  (LSI_VALUE)
@@ -120,7 +120,7 @@
 #endif /* LSI_VALUE */                      /*!< Value of the Internal Low Speed oscillator in Hz
                                              The real value may vary depending on the variations
                                              in voltage and temperature.*/
-/**
+/<b>
   * @brief External Low Speed oscillator (LSE) value.
   */
 #if !defined  (LSE_VALUE)
@@ -131,7 +131,7 @@
   #define LSE_STARTUP_TIMEOUT    5000U   /*!< Time out for LSE start up, in ms */
 #endif /* LSE_STARTUP_TIMEOUT */
 
-/**
+/<b>
   * @brief External clock source for I2S peripheral
   *        This value is used by the I2S HAL module to compute the I2S clock source
   *        frequency, this source is inserted directly through I2S_CKIN pad.
@@ -144,7 +144,7 @@
    ===  you can define the HSE value in your toolchain compiler preprocessor. */
 
 /* ########################### System Configuration ######################### */
-/**
+/<b>
   * @brief This is the HAL system configuration section
   */
 #define  VDD_VALUE		      3300U /*!< Value of VDD in mv */
@@ -195,7 +195,7 @@
 #define  USE_HAL_WWDG_REGISTER_CALLBACKS        0U /* WWDG register callback disabled      */
 
 /* ########################## Assert Selection ############################## */
-/**
+/<b>
   * @brief Uncomment the line below to expanse the "assert_param" macro in the
   *        HAL drivers code
   */
@@ -267,7 +267,7 @@
 #define USE_SPI_CRC                     0U
 
 /* Includes ------------------------------------------------------------------*/
-/**
+/<b>
   * @brief Include module's header file
   */
 
@@ -473,7 +473,7 @@
 
 /* Exported macro ------------------------------------------------------------*/
 #ifdef  USE_FULL_ASSERT
-/**
+/<b>
   * @brief  The assert_param macro is used for function's parameters check.
   * @param  expr If expr is false, it calls assert_failed function
   *         which reports the name of the source file and the source

@@ -1,10 +1,10 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
+/<b>
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @file         stm32f4xx_hal_msp.c
   * @brief        This file provides code for the MSP Initialization
   *               and de-Initialization codes.
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @attention
   *
   * Copyright (c) 2022 STMicroelectronics.
@@ -14,7 +14,7 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   */
 /* USER CODE END Header */
 
@@ -57,7 +57,7 @@
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
-/**
+/<b>
   * Initializes the Global MSP.
   */
 void HAL_MspInit(void)
@@ -76,7 +76,7 @@ void HAL_MspInit(void)
   /* USER CODE END MspInit 1 */
 }
 
-/**
+/<b>
 * @brief ETH MSP Initialization
 * This function configures the hardware resources used in this example
 * @param heth: ETH handle pointer
@@ -97,7 +97,7 @@ void HAL_ETH_MspInit(ETH_HandleTypeDef* heth)
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_GPIOG_CLK_ENABLE();
-    /**ETH GPIO Configuration
+    /<b>ETH GPIO Configuration
     PC1     ------> ETH_MDC
     PA1     ------> ETH_REF_CLK
     PA2     ------> ETH_MDIO
@@ -143,7 +143,7 @@ void HAL_ETH_MspInit(ETH_HandleTypeDef* heth)
 
 }
 
-/**
+/<b>
 * @brief ETH MSP De-Initialization
 * This function freeze the hardware resources used in this example
 * @param heth: ETH handle pointer
@@ -159,7 +159,7 @@ void HAL_ETH_MspDeInit(ETH_HandleTypeDef* heth)
     /* Peripheral clock disable */
     __HAL_RCC_ETH_CLK_DISABLE();
 
-    /**ETH GPIO Configuration
+    /<b>ETH GPIO Configuration
     PC1     ------> ETH_MDC
     PA1     ------> ETH_REF_CLK
     PA2     ------> ETH_MDIO
@@ -185,7 +185,7 @@ void HAL_ETH_MspDeInit(ETH_HandleTypeDef* heth)
 
 }
 
-/**
+/<b>
 * @brief UART MSP Initialization
 * This function configures the hardware resources used in this example
 * @param huart: UART handle pointer
@@ -203,7 +203,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
     __HAL_RCC_USART3_CLK_ENABLE();
 
     __HAL_RCC_GPIOD_CLK_ENABLE();
-    /**USART3 GPIO Configuration
+    /<b>USART3 GPIO Configuration
     PD8     ------> USART3_TX
     PD9     ------> USART3_RX
     */
@@ -221,7 +221,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 
 }
 
-/**
+/<b>
 * @brief UART MSP De-Initialization
 * This function freeze the hardware resources used in this example
 * @param huart: UART handle pointer
@@ -237,7 +237,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
     /* Peripheral clock disable */
     __HAL_RCC_USART3_CLK_DISABLE();
 
-    /**USART3 GPIO Configuration
+    /<b>USART3 GPIO Configuration
     PD8     ------> USART3_TX
     PD9     ------> USART3_RX
     */
@@ -250,7 +250,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
 
 }
 
-/**
+/<b>
 * @brief PCD MSP Initialization
 * This function configures the hardware resources used in this example
 * @param hpcd: PCD handle pointer
@@ -266,7 +266,7 @@ void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
   /* USER CODE END USB_OTG_FS_MspInit 0 */
 
     __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**USB_OTG_FS GPIO Configuration
+    /<b>USB_OTG_FS GPIO Configuration
     PA8     ------> USB_OTG_FS_SOF
     PA9     ------> USB_OTG_FS_VBUS
     PA10     ------> USB_OTG_FS_ID
@@ -294,7 +294,7 @@ void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
 
 }
 
-/**
+/<b>
 * @brief PCD MSP De-Initialization
 * This function freeze the hardware resources used in this example
 * @param hpcd: PCD handle pointer
@@ -310,7 +310,7 @@ void HAL_PCD_MspDeInit(PCD_HandleTypeDef* hpcd)
     /* Peripheral clock disable */
     __HAL_RCC_USB_OTG_FS_CLK_DISABLE();
 
-    /**USB_OTG_FS GPIO Configuration
+    /<b>USB_OTG_FS GPIO Configuration
     PA8     ------> USB_OTG_FS_SOF
     PA9     ------> USB_OTG_FS_VBUS
     PA10     ------> USB_OTG_FS_ID

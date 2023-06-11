@@ -1,5 +1,5 @@
-/**
-  ******************************************************************************
+/<b>
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @file    system_stm32f4xx.c
   * @author  MCD Application Team
   * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
@@ -19,7 +19,7 @@
   *                                 during program execution.
   *
   *
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @attention
   *
   * Copyright (c) 2017 STMicroelectronics.
@@ -29,18 +29,18 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   */
 
-/** @addtogroup CMSIS
+/<b> @addtogroup CMSIS
   * @{
   */
 
-/** @addtogroup stm32f4xx_system
+/<b> @addtogroup stm32f4xx_system
   * @{
   */  
   
-/** @addtogroup STM32F4xx_System_Private_Includes
+/<b> @addtogroup STM32F4xx_System_Private_Includes
   * @{
   */
 
@@ -55,23 +55,23 @@
   #define HSI_VALUE    ((uint32_t)16000000) /*!< Value of the Internal oscillator in Hz*/
 #endif /* HSI_VALUE */
 
-/**
+/<b>
   * @}
   */
 
-/** @addtogroup STM32F4xx_System_Private_TypesDefinitions
+/<b> @addtogroup STM32F4xx_System_Private_TypesDefinitions
   * @{
   */
 
-/**
+/<b>
   * @}
   */
 
-/** @addtogroup STM32F4xx_System_Private_Defines
+/<b> @addtogroup STM32F4xx_System_Private_Defines
   * @{
   */
 
-/************************* Miscellaneous Configuration ************************/
+/<b><b><b><b><b><b><b><b><b><b><b><b>* Miscellaneous Configuration <b><b><b><b><b><b><b><b><b><b><b><b>/
 /*!< Uncomment the following line if you need to use external SRAM or SDRAM as data memory  */
 #if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)\
  || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
@@ -109,21 +109,21 @@
                                                      This value must be a multiple of 0x200. */
 #endif /* VECT_TAB_SRAM */
 #endif /* USER_VECT_TAB_ADDRESS */
-/******************************************************************************/
+/<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>/
 
-/**
+/<b>
   * @}
   */
 
-/** @addtogroup STM32F4xx_System_Private_Macros
+/<b> @addtogroup STM32F4xx_System_Private_Macros
   * @{
   */
 
-/**
+/<b>
   * @}
   */
 
-/** @addtogroup STM32F4xx_System_Private_Variables
+/<b> @addtogroup STM32F4xx_System_Private_Variables
   * @{
   */
   /* This variable is updated in three ways:
@@ -137,11 +137,11 @@
 uint32_t SystemCoreClock = 16000000;
 const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
 const uint8_t APBPrescTable[8]  = {0, 0, 0, 0, 1, 2, 3, 4};
-/**
+/<b>
   * @}
   */
 
-/** @addtogroup STM32F4xx_System_Private_FunctionPrototypes
+/<b> @addtogroup STM32F4xx_System_Private_FunctionPrototypes
   * @{
   */
 
@@ -149,15 +149,15 @@ const uint8_t APBPrescTable[8]  = {0, 0, 0, 0, 1, 2, 3, 4};
   static void SystemInit_ExtMemCtl(void); 
 #endif /* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */
 
-/**
+/<b>
   * @}
   */
 
-/** @addtogroup STM32F4xx_System_Private_Functions
+/<b> @addtogroup STM32F4xx_System_Private_Functions
   * @{
   */
 
-/**
+/<b>
   * @brief  Setup the microcontroller system
   *         Initialize the FPU setting, vector table location and External memory 
   *         configuration.
@@ -181,7 +181,7 @@ void SystemInit(void)
 #endif /* USER_VECT_TAB_ADDRESS */
 }
 
-/**
+/<b>
    * @brief  Update SystemCoreClock variable according to Clock Register Values.
   *         The SystemCoreClock variable contains the core clock (HCLK), it can
   *         be used by the user application to setup the SysTick timer or configure
@@ -197,16 +197,16 @@ void SystemInit(void)
   *             
   *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(*)
   *                                              
-  *           - If SYSCLK source is HSE, SystemCoreClock will contain the HSE_VALUE(**)
+  *           - If SYSCLK source is HSE, SystemCoreClock will contain the HSE_VALUE(<b>)
   *                          
-  *           - If SYSCLK source is PLL, SystemCoreClock will contain the HSE_VALUE(**) 
+  *           - If SYSCLK source is PLL, SystemCoreClock will contain the HSE_VALUE(<b>) 
   *             or HSI_VALUE(*) multiplied/divided by the PLL factors.
   *         
   *         (*) HSI_VALUE is a constant defined in stm32f4xx_hal_conf.h file (default value
   *             16 MHz) but the real value may vary depending on the variations
   *             in voltage and temperature.   
   *    
-  *         (**) HSE_VALUE is a constant defined in stm32f4xx_hal_conf.h file (its value
+  *         (<b>) HSE_VALUE is a constant defined in stm32f4xx_hal_conf.h file (its value
   *              depends on the application requirements), user has to ensure that HSE_VALUE
   *              is same as the real frequency of the crystal used. Otherwise, this function
   *              may have wrong result.
@@ -268,7 +268,7 @@ void SystemCoreClockUpdate(void)
 #if defined (DATA_IN_ExtSRAM) && defined (DATA_IN_ExtSDRAM)
 #if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)\
  || defined(STM32F469xx) || defined(STM32F479xx)
-/**
+/<b>
   * @brief  Setup the external memory controller.
   *         Called in startup_stm32f4xx.s before jump to main.
   *         This function configures the external memories (SRAM/SDRAM)
@@ -434,7 +434,7 @@ void SystemInit_ExtMemCtl(void)
 }
 #endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */
 #elif defined (DATA_IN_ExtSRAM) || defined (DATA_IN_ExtSDRAM)
-/**
+/<b>
   * @brief  Setup the external memory controller.
   *         Called in startup_stm32f4xx.s before jump to main.
   *         This function configures the external memories (SRAM/SDRAM)
@@ -734,14 +734,14 @@ void SystemInit_ExtMemCtl(void)
   (void)(tmp); 
 }
 #endif /* DATA_IN_ExtSRAM && DATA_IN_ExtSDRAM */
-/**
+/<b>
   * @}
   */
 
-/**
+/<b>
   * @}
   */
 
-/**
+/<b>
   * @}
   */

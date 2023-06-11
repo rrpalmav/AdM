@@ -9,86 +9,86 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Drivers/STM32F4xx_HAL_Driver/subdir.mk
+-include Drivers/STM32F4xx<em>HAL<em>Driver/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
-ifneq ($(strip $(S_DEPS)),)
--include $(S_DEPS)
+ifneq ($(strip $(S<em>DEPS)),)
+-include $(S<em>DEPS)
 endif
-ifneq ($(strip $(S_UPPER_DEPS)),)
--include $(S_UPPER_DEPS)
+ifneq ($(strip $(S<em>UPPER<em>DEPS)),)
+-include $(S<em>UPPER<em>DEPS)
 endif
-ifneq ($(strip $(C_DEPS)),)
--include $(C_DEPS)
+ifneq ($(strip $(C<em>DEPS)),)
+-include $(C<em>DEPS)
 endif
 endif
 
 -include ../makefile.defs
 
-OPTIONAL_TOOL_DEPS := \
+OPTIONAL<em>TOOL<em>DEPS := \
 $(wildcard ../makefile.defs) \
 $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := adm_c16
-BUILD_ARTIFACT_EXTENSION := elf
-BUILD_ARTIFACT_PREFIX :=
-BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
+BUILD<em>ARTIFACT<em>NAME := adm<em>c16
+BUILD<em>ARTIFACT<em>EXTENSION := elf
+BUILD<em>ARTIFACT<em>PREFIX :=
+BUILD<em>ARTIFACT := $(BUILD<em>ARTIFACT<em>PREFIX)$(BUILD<em>ARTIFACT<em>NAME)$(if $(BUILD<em>ARTIFACT<em>EXTENSION),.$(BUILD<em>ARTIFACT<em>EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-adm_c16.elf \
+adm<em>c16.elf \
 
-MAP_FILES += \
-adm_c16.map \
+MAP<em>FILES += \
+adm<em>c16.map \
 
-SIZE_OUTPUT += \
+SIZE<em>OUTPUT += \
 default.size.stdout \
 
-OBJDUMP_LIST += \
-adm_c16.list \
+OBJDUMP<em>LIST += \
+adm<em>c16.list \
 
-OBJCOPY_BIN += \
-adm_c16.bin \
+OBJCOPY<em>BIN += \
+adm<em>c16.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: adm_c16.elf secondary-outputs
+main-build: adm<em>c16.elf secondary-outputs
 
 # Tool invocations
-adm_c16.elf adm_c16.map: $(OBJS) $(USER_OBJS) /home/palmaventura/Documents/Projectos_FreeRTOS/adm_c16/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "adm_c16.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/palmaventura/Documents/Projectos_FreeRTOS/adm_c16/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="adm_c16.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+adm<em>c16.elf adm<em>c16.map: $(OBJS) $(USER<em>OBJS) /home/palmaventura/Documents/Projectos<em>FreeRTOS/adm<em>c16/STM32F429ZITX<em>FLASH.ld makefile objects.list $(OPTIONAL<em>TOOL<em>DEPS)
+	arm-none-eabi-gcc -o "adm<em>c16.elf" @"objects.list" $(USER<em>OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/palmaventura/Documents/Projectos<em>FreeRTOS/adm<em>c16/STM32F429ZITX<em>FLASH.ld" --specs=nosys.specs -Wl,-Map="adm<em>c16.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL<em>TOOL<em>DEPS)
 	arm-none-eabi-size  $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-adm_c16.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "adm_c16.list"
+adm<em>c16.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL<em>TOOL<em>DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "adm<em>c16.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-adm_c16.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "adm_c16.bin"
+adm<em>c16.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL<em>TOOL<em>DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "adm<em>c16.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) adm_c16.bin adm_c16.elf adm_c16.list adm_c16.map default.size.stdout
+	-$(RM) adm<em>c16.bin adm<em>c16.elf adm<em>c16.list adm<em>c16.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE<em>OUTPUT) $(OBJDUMP<em>LIST) $(OBJCOPY<em>BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

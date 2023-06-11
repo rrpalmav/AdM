@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file    stm32f4xx_it.h
+/<b>
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
+  * @file    stm32f4xx<em>it.h
   * @brief   This file contains the headers of the interrupt handlers.
-  ******************************************************************************
+  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   * @attention
   *
   * Copyright (c) 2022 STMicroelectronics.
@@ -13,15 +13,15 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
- ******************************************************************************
+ <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
   */
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32F4xx_IT_H
-#define __STM32F4xx_IT_H
+#ifndef <em><em>STM32F4xx<em>IT<em>H
+#define <em><em>STM32F4xx<em>IT<em>H
 
-#ifdef __cplusplus
+#ifdef <em><em>cplusplus
  extern "C" {
 #endif
 
@@ -46,21 +46,21 @@
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
+void NMI<em>Handler(void);
+void HardFault<em>Handler(void);
+void MemManage<em>Handler(void);
+void BusFault<em>Handler(void);
+void UsageFault<em>Handler(void);
+void SVC<em>Handler(void);
+void DebugMon<em>Handler(void);
+void PendSV<em>Handler(void);
+void SysTick<em>Handler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
-#ifdef __cplusplus
+#ifdef <em><em>cplusplus
 }
 #endif
 
-#endif /* __STM32F4xx_IT_H */
+#endif /* <em><em>STM32F4xx<em>IT<em>H */

@@ -1,4 +1,4 @@
-/home/palmaventura/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c:70:19:HAL_PCDEx_SetTxFiFo	24	static
-/home/palmaventura/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c:112:19:HAL_PCDEx_SetRxFiFo	16	static
-/home/palmaventura/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c:297:13:HAL_PCDEx_LPM_Callback	16	static
-/home/palmaventura/STM32Cube/Repository/STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c:314:13:HAL_PCDEx_BCD_Callback	16	static
+/home/palmaventura/STM32Cube/Repository/STM32Cube<em>FW<em>F4<em>V1.27.1/Drivers/STM32F4xx<em>HAL<em>Driver/Src/stm32f4xx<em>hal<em>pcd<em>ex.c:70:19:HAL<em>PCDEx<em>SetTxFiFo	24	static
+/home/palmaventura/STM32Cube/Repository/STM32Cube<em>FW<em>F4<em>V1.27.1/Drivers/STM32F4xx<em>HAL<em>Driver/Src/stm32f4xx<em>hal<em>pcd<em>ex.c:112:19:HAL<em>PCDEx<em>SetRxFiFo	16	static
+/home/palmaventura/STM32Cube/Repository/STM32Cube<em>FW<em>F4<em>V1.27.1/Drivers/STM32F4xx<em>HAL<em>Driver/Src/stm32f4xx<em>hal<em>pcd<em>ex.c:297:13:HAL<em>PCDEx<em>LPM<em>Callback	16	static
+/home/palmaventura/STM32Cube/Repository/STM32Cube<em>FW<em>F4<em>V1.27.1/Drivers/STM32F4xx<em>HAL<em>Driver/Src/stm32f4xx<em>hal<em>pcd<em>ex.c:314:13:HAL<em>PCDEx<em>BCD<em>Callback	16	static
