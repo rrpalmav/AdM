@@ -43,3 +43,17 @@
         @ bx lr
         @ push {lr} ... pop {pc}
 
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ Prototipo en "C":
+@   uint32_t asmSum (uint32_t firstOperand, uint32_t secondOperand)
+@
+@ Parametros recibidos:
+@   r0: firstOperand
+@   r1: secondOperand
+@
+@ Valor de retorno:
+@   r0: resultado de la suma de firstOperand y secondOperand
+@
+
