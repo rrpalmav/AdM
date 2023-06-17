@@ -110,8 +110,16 @@ decrementa la variable contador debe agregársele el sufijo 'S', para que al lle
 
 3. ¿Qué utilidad tiene la implementación de instrucciones de aritmética saturada? Dé un
 ejemplo con operaciones con datos de 8 bits.
+
 4. Describa brevemente la interfaz entre assembler y C ¿Cómo se reciben los argumentos
 de las funciones? ¿Cómo se devuelve el resultado? ¿Qué registros deben guardarse en la
 pila antes de ser modificados?
+<br/><em>Respuesta:</em><br/>
+
+><em>Cuando se llama a una función en asembler el compilador utiliza predeterminadamente los registros r0 al r3. Al momento de devolver se devuelve mediante el registro r0. Al salir de la función los registros r0 al r3 recuperan su estado. Si se desea utilizar otros registros se deben preservar.</em>
+
 5. ¿Qué es una instrucción SIMD? ¿En qué se aplican y que ventajas reporta su uso? Dé un
 ejemplo.
+<br/><em>Respuesta:</em><br/>
+
+><em>Una instrucción SIMD es una instrucción que puede procesar múltiples datos en una sola operación. El mayor uso es para procesar imagenes.</em>
