@@ -31,14 +31,14 @@ void productoEscalar32(uint32_t *vectorIn, uint32_t *vectorOut, uint32_t longitu
 
 	/*
 	uint32_t max32bits = UINT32_MAX;
-	
+
 	for(; longitud > 0; longitud-- ){
 		if(vectorOut[longitud] > (max32bits / escalar)) vectorOut[longitud] = max32bits;
 		else vectorOut[longitud] = vectorIn[longitud] * escalar;
 	}
 	*/
 	uint32_t i;
-	
+
 	for(i = longitud; i > 0; i-- ){
 		vectorOut[i-1] = vectorIn[i-1] * escalar;
 	}
@@ -60,7 +60,7 @@ void productoEscalar16(uint16_t *vectorIn, uint16_t *vectorOut, uint32_t longitu
 	*/
 
 	uint32_t i;
-	
+
 	for(i = longitud; i > 0; i-- ){
 		vectorOut[i-1] = vectorIn[i-1] * escalar;
 	}
@@ -90,7 +90,7 @@ void productoEscalar12(uint16_t *vectorIn, uint16_t *vectorOut, uint32_t longitu
 		valorMaximo = vectorIn[i-1]*escalar;
 		if(valorMaximo > max12bits){
 			valorMaximo = max12bits;
-		}	
+		}
 		vectorOut[i-1] = valorMaximo;
 	}
 
@@ -127,7 +127,7 @@ void filtroVentana10(uint16_t * vectorIn, uint16_t * vectorOut, uint32_t longitu
 void pack32to16 (int32_t * vectorIn, int16_t *vectorOut, uint32_t longitud){
 
 	for (uint32_t i = longitud; i > 0; i--){
-		vectorOut[i] = (uint16_t)(vectorIn[i]>>8);
+		vectorOut[i] = vectorIn[i]>>16);
 	}
 
 }
@@ -156,7 +156,7 @@ int32_t max (int32_t * vectorIn, uint32_t longitud){
 */
 
 void downsampleM (int32_t * vectorIn, int32_t * vectorOut, uint32_t longitud, uint32_t N){
-	
+
 	uint32_t valor = 1;
 	uint32_t j = 0;
 	for (uint32_t i = 0; i < longitud - 1; i++){
@@ -167,7 +167,7 @@ void downsampleM (int32_t * vectorIn, int32_t * vectorOut, uint32_t longitud, ui
 			valor++;
 			j++;
 		}
-		
+
 	}
 }
 
@@ -181,9 +181,9 @@ void invertir (uint16_t * vector, uint32_t longitud){
 
 	uint32_t indexi = 0;
 	uint32_t indexf = longitud - 1;
-	
+
 	while(indexf > indexi){
-		
+
 		uint32_t temp = vector[indexi];
 		vector[indexi] = vector[indexf];
 		vector[indexf] = temp;
@@ -191,7 +191,7 @@ void invertir (uint16_t * vector, uint32_t longitud){
 		indexi++;
 		indexf--;
 	}
-	
+
 }
 
 /*
@@ -206,8 +206,12 @@ void invertir (uint16_t * vector, uint32_t longitud){
 * instrucciones SIMD para optimizar la ejecución del algoritmo.
 */
 
-void eco (uint16_t * vector, uint32_t longitud);
-
+void eco (uint16_t * vector, uint32_t longitud){
+	uint32_t start = longitud*vector/1000;
+	for(uint32_t i = start; i<longitud; i++){
+		vector[i]=vector[i]+vector[i-882]/2;
+	}
+}
 
 /*
 * 11) La correlación cruzada (del inglés cross correlation) es una operación usada para estudiar el
@@ -221,4 +225,3 @@ void eco (uint16_t * vector, uint32_t longitud);
 */
 
 void corr (int16_t *vectorX, int16_t * vectorY, int16_t vectorCorr, uint32_t longitud);
-

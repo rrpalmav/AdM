@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
-/<b>
-  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
+/**
+  ******************************************************************************
   * @file           : main.c
   * @brief          : Main program body
-  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
+  ******************************************************************************
   * @attention
   *
   * Copyright (c) 2022 STMicroelectronics.
@@ -13,12 +13,13 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  <b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>
+  ******************************************************************************
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "string.h"
+#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -123,7 +124,7 @@ static void PrivilegiosSVC (void)
 }
 /* USER CODE END 0 */
 
-/<b>
+/**
   * @brief  The application entry point.
   * @retval int
   */
@@ -131,6 +132,20 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
+  uint32_t  vector1[8] = {1000, 30, 40, 25, 40, 23045, 42560, 15000};
+  uint32_t  vector2[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+  uint32_t  longitud = 8;
+
+  /*
+  zeros(vector1, longitud);
+  printf("\n\r");
+  */
+  productoEscalar32(vector1, vector2, longitud, escalar)
+
+
+  for(int i = 0; i <= longitud; i++){
+	  printf("%ld\t%ld\n\r", vector1[i], vector2[i]);
+  }
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -171,7 +186,7 @@ int main(void)
   /* USER CODE END 3 */
 }
 
-/<b>
+/**
   * @brief System Clock Configuration
   * @retval None
   */
@@ -180,12 +195,12 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /<b> Configure the main internal regulator output voltage
+  /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-  /<b> Initializes the RCC Oscillators according to the specified parameters
+  /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
@@ -201,7 +216,7 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
-  /<b> Initializes the CPU, AHB and APB buses clocks
+  /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -216,7 +231,7 @@ void SystemClock_Config(void)
   }
 }
 
-/<b>
+/**
   * @brief ETH Initialization Function
   * @param None
   * @retval None
@@ -265,7 +280,7 @@ static void MX_ETH_Init(void)
 
 }
 
-/<b>
+/**
   * @brief USART3 Initialization Function
   * @param None
   * @retval None
@@ -298,7 +313,7 @@ static void MX_USART3_UART_Init(void)
 
 }
 
-/<b>
+/**
   * @brief USB_OTG_FS Initialization Function
   * @param None
   * @retval None
@@ -333,7 +348,7 @@ static void MX_USB_OTG_FS_PCD_Init(void)
 
 }
 
-/<b>
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -392,7 +407,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE END 4 */
 
-/<b>
+/**
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
@@ -408,7 +423,7 @@ void Error_Handler(void)
 }
 
 #ifdef  USE_FULL_ASSERT
-/<b>
+/**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
   * @param  file: pointer to the source file name

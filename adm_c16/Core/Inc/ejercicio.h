@@ -5,8 +5,8 @@
  *      Author: palmaventura
  */
 
-#ifndef INC_EJERCICIO_H
-#define INC_EJERCICIO_H
+#ifndef INC_EJERCICIO_H_
+#define INC_EJERCICIO_H_
 
 #include <stdint.h>
 
@@ -62,14 +62,6 @@ int32_t max (int32_t * vectorIn, uint32_t longitud);
 
 
 /*
-* 7) Realizar una función que reciba un vector de números signados de 32 bits y devuelva la posición
-* del máximo del vector.
-*/
-
-int32_t max (int32_t * vectorIn, uint32_t longitud);
-
-
-/*
 * 8) Realizar una función que reciba un vector de muestras signadas de 32 bits y lo decime
 * descartando una cada N muestras.
 */
@@ -110,5 +102,6 @@ void eco (uint16_t * vector, uint32_t longitud);
 */
 
 void corr (int16_t *vectorX, int16_t * vectorY, int16_t vectorCorr, uint32_t longitud);
+
 
 #endif /* INC_EJERCICIO_H_ */
